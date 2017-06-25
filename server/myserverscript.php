@@ -5,11 +5,8 @@
 <?php
 
 $inputstr = $_REQUEST["i"];
+echo (int)$inputstr * 3;
 
-echo "my server script output based on input: ";
-echo $inputstr;
-
-/* TODO based output on input + processing */
 ?> 
 
 </body>
