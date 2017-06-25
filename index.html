@@ -1,9 +1,37 @@
+<!DOCTYPE html>
+<html>
+<body>
+
 <head>
-<link rel="stylesheet" type="text/css" href="styles/mystylesheet.css">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="styles/basic.css">
+<script src="scripts/myscript.js"></script>
 </head>
 
 <p id="js"> hello web </p>
+<button onclick="document.getElementById('js').innerHTML='hello JavaScript'">JS test</button>
 
-<button onclick="document.getElementById('js').innerHTML='hello JavaScript'">Click me</button>
+<p id="text">loaded text will go here</p>
+<button type="button" onclick="loadData('text', 'server/data/mytext.txt')">Load text</button>
 
-<script>console.log ("hello? hello!”)</script>
+<p id="data">loaded text will go here</p>
+<button type="button" onclick="loadData('data', 'server/myserverscript.php?i='+'some input')">Load PHP data</button>
+<!-- TODO based input on some user selection -->
+<br>
+
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.strokeStyle="#FF0000"; //TODO make this data from the server
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+</script> 
+
+<script>console.log('hello?') </script>
+
+</body>
+</html>
